@@ -1,9 +1,9 @@
 Variable,Baseline,Dist. Lags
 Mortgage rate (t),-0.732,-1.079
-Mortgage rate (t-1),—,-0.306
-Mortgage rate (t-2),—,1.080
-Mortgage rate (t-3),—,-0.760
-Mortgage rate (t-4),—,0.550
+Mortgage rate (t-1),-,-0.306
+Mortgage rate (t-2),-,1.080
+Mortgage rate (t-3),-,-0.760
+Mortgage rate (t-4),-,0.550
 Cumulative (0 to 4),-0.732,-0.516
 GDP growth,0.164,0.108
 Unemployment,-0.271,-0.275
