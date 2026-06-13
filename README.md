@@ -1,4 +1,4 @@
-# Euro Area Housing & Monetary Policy — Panel Data Analysis
+# Euro Area Housing & Monetary Policy - Panel Data Analysis
 
 Panel study of whether lower mortgage rates predict higher house price growth across nine euro-area countries, **2003–2023**.
 
@@ -22,8 +22,8 @@ Panel study of whether lower mortgage rates predict higher house price growth ac
 
 | Variable | Source | Series |
 |----------|--------|--------|
-| House Price Index | FRED (BIS) | `Q{CC}N628BIS` — Index 2010 = 100 |
-| Mortgage Rate | ECB SDW | MIR — new business, dwellings, floating ≤ 10 yr |
+| House Price Index | FRED (BIS) | `Q{CC}N628BIS` - Index 2010 = 100 |
+| Mortgage Rate | ECB SDW | MIR - new business, dwellings, floating ≤ 10 yr |
 | ECB Policy Rate | FRED | `ECBDFR` |
 | GDP Growth | Eurostat | `namq_10_gdp` |
 | Unemployment | FRED (OECD) | `LRHUTTTT{CC}Q156S` |
@@ -93,13 +93,13 @@ HPI_Growth_it = α_i + γ_t + β · MortgageRate_it + δ′X_it + ε_it
 
 | Model | Description |
 |-------|-------------|
-| **1** | Baseline — QoQ HPI growth ~ mortgage rate + controls |
-| **2** | Distributed lag — mortgage rates at t … t−4 |
-| **3** | Sub-period — pre-QE (2003–2014) vs QE era (2015–2019) |
-| **4A** | **Phase A primary** — YoY HPI growth ~ mortgage rate + controls |
+| **1** | Baseline - QoQ HPI growth ~ mortgage rate + controls |
+| **2** | Distributed lag - mortgage rates at t … t−4 |
+| **3** | Sub-period - pre-QE (2003–2014) vs QE era (2015–2019) |
+| **4A** | **Phase A primary** - YoY HPI growth ~ mortgage rate + controls |
 | **4B** | Rate changes (Δrate) + one lag |
 | **4C** | Mortgage rate × post-QE interaction |
-| **4D** | Robustness — 2009–2019 subsample |
+| **4D** | Robustness - 2009–2019 subsample |
 
 ---
 
@@ -111,7 +111,7 @@ HPI_Growth_it = α_i + γ_t + β · MortgageRate_it + δ′X_it + ε_it
 | **4B Δ rate (t)** | +1.84 | 0.027 | Short-run rate change effects |
 | **4B Δ rate (t−1)** | −1.82 | 0.021 | Offsetting lag; cumulative ≈ 0 |
 | **4C pre-QE slope** | −2.85 | 0.001 | Strong pass-through before 2015 |
-| **4C post-QE slope** | +0.56 | — | Link weakens at the effective lower bound |
+| **4C post-QE slope** | +0.56 | - | Link weakens at the effective lower bound |
 | **4D 2009–2019** | −2.17 | 0.053 | Robust to excluding COVID period |
 
 Baseline Model 1 (QoQ): mortgage coefficient **−0.73** (p = 0.006).
@@ -130,9 +130,9 @@ This magnitude is economically plausible and aligns with the negative raw correl
 
 ### Baseline models (quarter-over-quarter growth)
 
-**Model 1** confirms the relationship at quarterly frequency: the mortgage coefficient is **−0.73** (p = 0.006)—a 1 pp higher rate corresponds to 0.73 pp slower *quarterly* growth. GDP growth is positive but only marginally significant (p ≈ 0.09); unemployment is negative and highly significant (−0.27, p < 0.001), consistent with weaker labour markets dampening house prices.
+**Model 1** confirms the relationship at quarterly frequency: the mortgage coefficient is **−0.73** (p = 0.006)-a 1 pp higher rate corresponds to 0.73 pp slower *quarterly* growth. GDP growth is positive but only marginally significant (p ≈ 0.09); unemployment is negative and highly significant (−0.27, p < 0.001), consistent with weaker labour markets dampening house prices.
 
-**Model 2** (distributed lags) shows the contemporaneous effect is strongest (−1.08, p = 0.009), while individual lags mostly offset each other. The **cumulative effect over four quarters** of a 1 pp rate *cut* is about **+0.52 pp** of quarterly house price growth—pass-through builds gradually rather than arriving in a single quarter.
+**Model 2** (distributed lags) shows the contemporaneous effect is strongest (−1.08, p = 0.009), while individual lags mostly offset each other. The **cumulative effect over four quarters** of a 1 pp rate *cut* is about **+0.52 pp** of quarterly house price growth-pass-through builds gradually rather than arriving in a single quarter.
 
 **Model 3** (split sample, QoQ) compares pre-QE (2003–2014) and the QE era (2015–2019):
 
@@ -143,13 +143,13 @@ This magnitude is economically plausible and aligns with the negative raw correl
 
 The link appears stronger during the QE period in this QoQ specification, though these are separate regressions rather than a formal interaction test (see Model 4C).
 
-### Phase A — primary specification (Model 4A)
+### Phase A - primary specification (Model 4A)
 
 Model 4A is the **main result** for this project. YoY house price growth is less noisy than QoQ growth and better matches how housing cycles are typically assessed.
 
 | Variable | Coefficient | p-value | Interpretation |
 |----------|-------------|---------|----------------|
-| Mortgage rate | −2.22 | 0.004 | Core finding — cost of borrowing and YoY house price growth move in opposite directions |
+| Mortgage rate | −2.22 | 0.004 | Core finding - cost of borrowing and YoY house price growth move in opposite directions |
 | GDP growth | +0.47 | 0.011 | Stronger activity supports house price growth |
 | Unemployment | −1.22 | < 0.001 | Higher unemployment dampens house prices |
 | Building permits | −0.004 | 0.28 | Supply proxy not significant in the full sample |
@@ -174,9 +174,9 @@ Model 4C adds a mortgage rate × post-QE interaction (post-QE = 1 from 2015Q1):
 |------|-------------|---------|
 | Mortgage rate (pre-2015 slope) | −2.85 | 0.001 |
 | Rate × post-QE | +3.41 | 0.079 |
-| **Implied post-2015 slope** | **+0.56** | — |
+| **Implied post-2015 slope** | **+0.56** | - |
 
-Before the ECB Asset Purchase Programme, mortgage rates strongly predict YoY house price growth. After 2015, the implied slope is near zero—the pass-through link **weakens or disappears** when policy rates hit the effective lower bound and mortgage rate variation compresses. The interaction is marginally significant (p = 0.079), suggesting a structural shift rather than a precise break date.
+Before the ECB Asset Purchase Programme, mortgage rates strongly predict YoY house price growth. After 2015, the implied slope is near zero-the pass-through link **weakens or disappears** when policy rates hit the effective lower bound and mortgage rate variation compresses. The interaction is marginally significant (p = 0.079), suggesting a structural shift rather than a precise break date.
 
 ### Robustness (Model 4D)
 
@@ -189,15 +189,15 @@ Re-estimating Model 4A on **2009–2019 only** (excluding the GFC onset and COVI
 | Do lower mortgage rates predict higher house price growth? | **Yes**, statistically significant in Models 1 and 4A |
 | How large is the effect? | ~**2 pp YoY** house price growth per **1 pp** mortgage rate (Model 4A) |
 | Do rate *cuts* or rate *levels* matter more? | **Levels** (Model 4B: changes cancel out) |
-| Did the relationship change after 2015? | **Likely yes** — strong pre-QE, weak post-QE (Model 4C) |
-| Is the result robust to sample choice? | **Mostly yes** — similar coefficient in 2009–2019 window (Model 4D) |
+| Did the relationship change after 2015? | **Likely yes** - strong pre-QE, weak post-QE (Model 4C) |
+| Is the result robust to sample choice? | **Mostly yes** - similar coefficient in 2009–2019 window (Model 4D) |
 
 ### Caveats
 
 - Results are **associations** within a fixed-effects framework; omitted variables (credit supply, expectations, macroprudential policy) may bias coefficients.
 - Nine countries is a small panel; inference relies on within-country time variation.
 - Post-2015 estimates are less reliable because mortgage rates had limited room to fall further.
-- These results describe the **euro area**, not Canada directly—though the housing–rates mechanism is relevant to central-bank research more broadly.
+- These results describe the **euro area**, not Canada directly-though the housing–rates mechanism is relevant to central-bank research more broadly.
 
 ---
 
@@ -222,11 +222,11 @@ Re-estimating Model 4A on **2009–2019 only** (excluding the GFC onset and COVI
 
 Several iterative fixes expanded the sample from **555 → 747** observations and corrected coefficient scaling:
 
-1. **HPI series** — switched from `N368BIS` (growth rates) to `N628BIS` (index levels)
-2. **Unemployment** — FRED OECD series (full 2003–2023) replaced Eurostat (2009+ only)
-3. **Eurostat filters** — corrected GDP unit (`PD_PCH_PRE_EUR`) and permits codes
-4. **Missing permits** — linear interpolation within country (7 gaps filled)
-5. **Phase A specs** — YoY DV, rate-change model, QE interaction, robustness window
+1. **HPI series** - switched from `N368BIS` (growth rates) to `N628BIS` (index levels)
+2. **Unemployment** - FRED OECD series (full 2003–2023) replaced Eurostat (2009+ only)
+3. **Eurostat filters** - corrected GDP unit (`PD_PCH_PRE_EUR`) and permits codes
+4. **Missing permits** - linear interpolation within country (7 gaps filled)
+5. **Phase A specs** - YoY DV, rate-change model, QE interaction, robustness window
 
 ---
 
@@ -251,7 +251,7 @@ For causal identification beyond Phase A:
 
 ## Author
 
-**Bhavleen Kaur** — [bhavleenkaur-econ](https://github.com/bhavleenkaur-econ)
+**Bhavleen Kaur** - [bhavleenkaur-econ](https://github.com/bhavleenkaur-econ)
 
 ---
 
